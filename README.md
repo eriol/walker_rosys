@@ -13,7 +13,7 @@ This package contains the URDF file of a diff drive walker and launch files to l
 2. Clone this repository to your ROS2 workspace:
    ```bash
    cd src \
-   git clone https://github.com/walker_rosys.git
+   git clone https://github.com/rosysgroup/walker_rosys.git
    ```
 
 3. Build the ROS2 package:
