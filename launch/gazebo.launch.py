@@ -14,7 +14,7 @@ def generate_launch_description():
         executable='robot_state_publisher',
         parameters=[{'robot_description': Command(['xacro ', LaunchConfiguration('model')])}]
     )
-    
+
     joint_state_publisher_node = launch_ros.actions.Node(
         package='joint_state_publisher',
         executable='joint_state_publisher',
@@ -45,6 +45,11 @@ def generate_launch_description():
     return launch.LaunchDescription([
         launch.actions.DeclareLaunchArgument(name='model', default_value=default_model_path,
                                             description='Absolute path to robot urdf file'),
+        launch.actions.DeclareLaunchArgument(
+            name="enable_gazebo_plugin",
+            default_value="false",
+            description="Enable Gazebo plugin section in URDF file",
+        ),
         launch.actions.ExecuteProcess(cmd=['gazebo', '--verbose', '-s', 'libgazebo_ros_init.so', '-s', 'libgazebo_ros_factory.so'], output='screen'),
         joint_state_publisher_node,
         robot_state_publisher_node,
