@@ -6,6 +6,7 @@
   <xacro:include filename="$(find walker_rosys)/urdf/d435_camera.urdf.xacro" />
   <xacro:include filename="$(find walker_rosys)/urdf/odrive_ros2_control.xacro" />
 
+  <xacro:arg name="enable_gazebo_plugin" default="false" />
   <xacro:arg name="sensors_pose_file" default="$(find walker_rosys)/config/sensors_pose.yaml" />
   <xacro:property name="sensors_pose_file" value="$(arg sensors_pose_file)" />
   <xacro:property name="camera_front_left"
