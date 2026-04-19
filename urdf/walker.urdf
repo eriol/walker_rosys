@@ -69,7 +69,7 @@
     <visual>
       <origin xyz="0 0 -0.07" rpy="0 0 0" />
       <geometry>
-        <mesh filename="$(find walker_rosys)/meshes/walker_frame.dae" />
+        <mesh filename="package://walker_rosys/meshes/walker_frame.dae" />
       </geometry>
       <material name="Cyan">
         <color rgba="0 1.0 1.0 1.0" />
@@ -78,7 +78,7 @@
     <collision>
       <origin xyz="0 0 -0.07" rpy="0 0 0" />
       <geometry>
-        <mesh filename="$(find walker_rosys)/meshes/walker_frame.dae" />
+        <mesh filename="package://walker_rosys/meshes/walker_frame.dae" />
       </geometry>
     </collision>
 
@@ -136,7 +136,7 @@
       <visual>
         <origin xyz="0 0 0" rpy="${pi/2} 0 0" />
         <geometry>
-          <mesh filename="$(find walker_rosys)/meshes/wheel.dae" scale="1 1 0.3" />
+          <mesh filename="package://walker_rosys/meshes/wheel.dae" scale="1 1 0.3" />
         </geometry>
         <material name="Gray">
           <color rgba="0.5 0.5 0.5 1.0" />
@@ -145,7 +145,7 @@
       <collision>
         <origin xyz="0 0 0" rpy="${pi/2} 0 0" />
         <geometry>
-          <mesh filename="$(find walker_rosys)/meshes/wheel.dae" scale="1 1 0.3" />
+          <mesh filename="package://walker_rosys/meshes/wheel.dae" scale="1 1 0.3" />
         </geometry>
       </collision>
 

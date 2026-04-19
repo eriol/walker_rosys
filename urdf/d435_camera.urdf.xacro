@@ -16,14 +16,14 @@
             <collision>
                 <origin xyz="0 0 0" rpy="0 0 0" />
                 <geometry>
-                    <mesh filename="$(find walker_rosys)/meshes/realsense_d435.stl" />
+                    <mesh filename="package://walker_rosys/meshes/realsense_d435.stl" />
                 </geometry>
             </collision>
 
             <visual>
                 <origin xyz="0 0 0" rpy="1.57 0 1.57" />
                 <geometry>
-                    <mesh filename="$(find walker_rosys)/meshes/realsense_d435.stl" />
+                    <mesh filename="package://walker_rosys/meshes/realsense_d435.stl" />
                 </geometry>
             </visual>
 
