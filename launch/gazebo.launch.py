@@ -12,7 +12,12 @@ def generate_launch_description():
     robot_state_publisher_node = launch_ros.actions.Node(
         package='robot_state_publisher',
         executable='robot_state_publisher',
-        parameters=[{'robot_description': Command(['xacro ', LaunchConfiguration('model')])}]
+        parameters=[{
+            'robot_description': Command([
+                'xacro ', LaunchConfiguration('model'),
+                ' enable_gazebo_plugin:=', LaunchConfiguration('enable_gazebo_plugin')
+            ])
+        }]
     )
 
     joint_state_publisher_node = launch_ros.actions.Node(
