@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<sdf version="1.7">
+  <model name="walker_rosys">
+    <static>true</static>
+    <link name="base_link" />
+  </model>
+</sdf>
